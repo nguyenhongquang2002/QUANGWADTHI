@@ -1,0 +1,75 @@
+﻿@model QUANGWADTHI.Models.Exam
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Home/About.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.examSubject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examSubject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facully)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facully)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

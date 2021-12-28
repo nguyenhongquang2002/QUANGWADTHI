@@ -1,0 +1,81 @@
+﻿@model QUANGWADTHI.Models.Exam
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Home/About.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.examSubject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examSubject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facully)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facully)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
