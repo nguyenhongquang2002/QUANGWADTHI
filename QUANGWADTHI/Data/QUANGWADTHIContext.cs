@@ -18,6 +18,7 @@ namespace QUANGWADTHI.Data
         public QUANGWADTHIContext() : base("name=QUANGWADTHIContext")
         {
         }
-    
+
+        public System.Data.Entity.DbSet<QUANGWADTHI.Models.Exam> Exams { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Home/About.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -13,25 +13,25 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.examSubject)
+            @Html.DisplayNameFor(model => model.ExamSubject)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.StartTime)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.examdate)
+            @Html.DisplayNameFor(model => model.ExamDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.examDuration)
+            @Html.DisplayNameFor(model => model.ExamDuration)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.classroom)
+            @Html.DisplayNameFor(model => model.Classroom)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.facully)
+            @Html.DisplayNameFor(model => model.Faculty)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.status)
+            @Html.DisplayNameFor(model => model.Status)
         </th>
         <th></th>
     </tr>
@@ -39,30 +39,30 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.examSubject)
+            @Html.DisplayFor(modelItem => item.ExamSubject)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.StartTime)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.examdate)
+            @Html.DisplayFor(modelItem => item.ExamDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.examDuration)
+            @Html.DisplayFor(modelItem => item.ExamDuration)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.classroom)
+            @Html.DisplayFor(modelItem => item.Classroom)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.facully)
+            @Html.DisplayFor(modelItem => item.Faculty)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.status)
+            @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

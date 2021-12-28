@@ -47,7 +47,7 @@ namespace QUANGWADTHI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,examSubject,StartTime,examdate,examDuration,classroom,facully,status")] Exam exam)
+        public ActionResult Create([Bind(Include = "Id,ExamSubject,StartTime,ExamDate,ExamDuration,Classroom,Faculty,Status")] Exam exam)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace QUANGWADTHI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,examSubject,StartTime,examdate,examDuration,classroom,facully,status")] Exam exam)
+        public ActionResult Edit([Bind(Include = "Id,ExamSubject,StartTime,ExamDate,ExamDuration,Classroom,Faculty,Status")] Exam exam)
         {
             if (ModelState.IsValid)
             {

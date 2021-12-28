@@ -8,17 +8,18 @@ namespace QUANGWADTHI.Models
 {
     public class Exam
     {
-        [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Please choose the exam. ")]
         public string ExamSubject { get; set; }
-        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
-        [DataType(DataType.Time)]
-        public DateTime StartTime { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [Required(ErrorMessage = "Please choose the start time of the exam. ")]
+        public string StartTime { get; set; }
+        [Required(ErrorMessage = "Please enter the test date  ")]
         public DateTime ExamDate { get; set; }
-        public int ExamDuration { get; set; }
-        public string ClassRoom { get; set; }
+        [Required(ErrorMessage = "Please choose the test time  ")]
+        public string ExamDuration { get; set; }
+        [Required(ErrorMessage = "Please select the exam room  ")]
+        public string Classroom { get; set; }
+        [Required(ErrorMessage = "Please choose the faculty  ")]
         public string Faculty { get; set; }
         public string Status { get; set; }
     }
